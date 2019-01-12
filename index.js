@@ -9,6 +9,7 @@ var client = null;
 
 executar_canais();
 conectar();
+client.action("johnpittertv", "/w johnpittertvbot !bonus");
 
 setInterval(function(){
 
@@ -18,6 +19,8 @@ setInterval(function(){
 
     executar_canais();
     conectar();
+	
+	client.action("johnpittertv", "/w johnpittertvbot !bonus");
 
 }, 30 * 60 * 1000);
 
@@ -58,4 +61,3 @@ function conectar() {
     });
     
 }
-
