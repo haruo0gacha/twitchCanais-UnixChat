@@ -24,6 +24,12 @@ setInterval(function(){
 
 }, 30 * 60 * 1000);
 
+setInterval(function(){
+
+    client.whisper("johnpittertvbot", "!bonus");
+	
+}, 30 * 60 * 1000);
+
 function executar_canais() {
     var site = https.get("https://raw.githubusercontent.com/unixcf/twitchCanais-UnixChat/master/canais%2Ctxt", function(pagina) {
     var github = readline.createInterface({
