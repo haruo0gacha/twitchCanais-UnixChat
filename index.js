@@ -9,7 +9,12 @@ var client = null;
 
 executar_canais();
 conectar();
-client.action("johnpittertv", "/w johnpittertvbot !bonus");
+
+setInterval(function(){
+
+    client.whisper("johnpittertvbot", "!bonus");
+	
+}, 10 * 60 * 000);
 
 setInterval(function(){
 
@@ -20,15 +25,10 @@ setInterval(function(){
     executar_canais();
     conectar();
 	
-	client.action("johnpittertv", "/w johnpittertvbot !bonus");
+}, 50 * 60 * 1000);
 
-}, 30 * 60 * 1000);
 
-setInterval(function(){
 
-    client.whisper("johnpittertvbot", "!bonus");
-	
-}, 30 * 60 * 1000);
 
 function executar_canais() {
     var site = https.get("https://raw.githubusercontent.com/unixcf/twitchCanais-UnixChat/master/canais%2Ctxt", function(pagina) {
@@ -53,8 +53,8 @@ function conectar() {
             reconnect: true
         }, 
         identity: {
-            username: "twitch_conta",
-            password: "oauth"
+            username: "unixcf",
+            password: "oauth:z5me19j4du92q5ykcijyd7s5jru8j6"
         },
         channels: canais
     };
@@ -67,3 +67,4 @@ function conectar() {
     });
     
 }
+
