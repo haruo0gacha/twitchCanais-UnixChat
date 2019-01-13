@@ -53,8 +53,8 @@ function conectar() {
             reconnect: true
         }, 
         identity: {
-            username: "unixcf",
-            password: "oauth:z5me19j4du92q5ykcijyd7s5jru8j6"
+            username: "conta",
+            password: "oauth"
         },
         channels: canais
     };
